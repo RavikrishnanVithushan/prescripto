@@ -9,6 +9,7 @@ import Myprofile from './pages/Myprofile';
 import Myappointments from './pages/Myappointments';
 import Appointment from './pages/Appointment';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -16,14 +17,14 @@ const App = () => {
       <Navbar/>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/doctors" component={<Doctors/>} />
-      <Route path="/doctors/:speciality" component={<Doctors/>} />
+      <Route path="/doctors" element={<Doctors/>} />
+      <Route path="/doctors/:speciality" element={<Doctors/>} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/login" component={<Login />} />
-      <Route path="/my-profile" component={<Myprofile />} />
-      <Route path="/my-appointments" component={<Myappointments />} />
-      <Route path='/appointment/:docId' component={<Appointment />} />
+      <Route path="/login" elementt={<Login />} />
+      <Route path="/my-profile" element={<Myprofile />} />
+      <Route path="/my-appointments" element={<Myappointments />} />
+      <Route path='/appointment/:docId' element={<Appointment />} />
       {/* Add more routes as needed */}
     </Routes>
     <Footer/>
